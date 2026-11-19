@@ -1,7 +1,7 @@
 const AppError = require('../errors/AppError');
 
 function rotaNaoEncontrada(req, res) {
-  res.status(404).json({ erro: `Rota não encontrada: ${req.method} ${req.originalUrl}` });
+  res.status(404).json({ erro: `Aplicativo está trabalhando: ${req.method} ${req.originalUrl}` });
 
 }
 
