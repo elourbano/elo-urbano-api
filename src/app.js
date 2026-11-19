@@ -18,6 +18,15 @@ app.get('/api/saude', (req, res) => res.json({ status: 'ok', projeto: 'Elo Urban
 app.use('/api/clientes', clienteRoutes);
 app.use('/api/fornecedores', fornecedorRoutes);
 
+app.get('/', (req, res) => {
+  res.json({
+    projeto: 'Elo Urbano',
+    status: 'API no ar',
+    site: 'https://jhonchagas.github.io/elo-urbano-api/',
+    saude: '/api/saude',
+  });
+});
+
 app.use(rotaNaoEncontrada);
 app.use(errorHandler);
 
